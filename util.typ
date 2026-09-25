@@ -2,6 +2,10 @@
   align(center, heading(depth: depth, numbering: none, content))
 } else { heading(depth: depth, numbering: none, content) }
 
+#let accessible_equation(expr) = {
+  math.equation(expr, alt: get.text(expr))
+}
+
 #let code_block(
     caption: none,             // content of caption bubble (string, none)
     bgcolor: none,   // back ground color (color)
